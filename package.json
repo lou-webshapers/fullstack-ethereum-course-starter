@@ -1,0 +1,20 @@
+{
+  "name": "chill",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "reset": "rm -rf node_modules ./apps/ui/node_modules ./apps/indexer/node_modules ./apps/smart-contracts/node_modules ./packages/shared/node_modules package-lock.json .turbo && npm i"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

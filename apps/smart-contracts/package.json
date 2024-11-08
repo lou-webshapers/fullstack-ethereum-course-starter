@@ -1,0 +1,29 @@
+{
+  "name": "smart-contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run compile",
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "node:local": "npx hardhat node",
+    "postcompile": "ts-node ./utils/copy-abis.ts",
+    "deploy:local": "npx hardhat run scripts/deploy.ts --network localhost",
+    "verify": "npx hardhat ignition verify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.8.2",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "hardhat": "^2.22.14",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0"
+  }
+}
